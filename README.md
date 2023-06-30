@@ -27,13 +27,13 @@ The principle of generating short links is to use the self-increasing ID generat
 2. Edit the `config.ini` file, see the file comments for specific configuration.
 3. Install dependencies
 
-   ```shell
+   ```bash
     pip install -r requirements.txt
     ```
 
 4. Run
 
-   ```shell
+   ```bash
     python main.py
     ```
 

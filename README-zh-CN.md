@@ -28,26 +28,33 @@
 
    ```yml
     [server]
-    port = 8283 ; 短网址服务运行端口
-    base_url = http://localhost:8283/ ; 短网址服务运行地址
+    ; 短网址服务运行端口
+    port = 8283
+    ; 短网址服务运行地址
+    base_url = http://localhost:8283/
 
     [database]
-    host = localhost ; 数据库地址
-    port = 27017 ; 数据库端口
-    login = 0 ; 是否需要登录 [0:不需要 1:需要]
-    user = root ; 数据库用户名
-    password = password ; 数据库密码
+    ; 数据库地址
+    host = localhost
+    ; 数据库端口
+    port = 27017
+    ; 是否需要登录 [0:不需要 1:需要]
+    login = 0
+    ; 数据库用户名
+    user = root
+    ; 数据库密码
+    password = password 
    ```
 
 3. 安装依赖
 
-   ```shell
+   ```bash
     pip install -r requirements.txt
     ```
 
 4. 运行
 
-   ```shell
+   ```bash
     python main.py
     ```
 
