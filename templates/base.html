@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="static/nes.min.css" rel="stylesheet" />
+    <link href="static/style.css" rel="stylesheet" /> -->
+    <link href="{{ url_for('static', filename='nes.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+
+<footer>
+    <a href="https://github.com/timlzh/short-url-generator" class="github-link active" target="_blank">
+        <p class="nes-balloon from-right" id="fork-balloon">Fork me<br>on GitHub</p>
+        <i class="nes-octocat animate"></i>
+    </a>
+    {% block footer %}
+    {% endblock %}
+</footer>
+
+</html>

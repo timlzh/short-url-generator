@@ -1,0 +1,78 @@
+@font-face {
+    font-family: zpix;
+    src: url(./zpix.woff2);
+}
+
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+    font-family: "zpix", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#url-form{
+    margin: 2rem;
+    width: 100%;
+}
+
+#url {
+    margin: 1rem;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0 1rem;
+    width: 100%;
+    text-align: right;
+}
+
+.github-link.active {
+    color: #333;
+    text-decoration: none;
+}
+
+.github-link {
+    height: 125px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#fork-balloon {
+    bottom: 50px;
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+dialog {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    margin: auto;
+    color: #000;
+    background: #fff;
+    border: solid;
+    text-align: center;
+}
+
+#error-container {
+    /* absolute center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}

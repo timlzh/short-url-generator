@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}短链接生成器 | URL Shortening{% endblock title %}
+{% block head %}
+<script type="text/javascript">
+    function copy(id) {
+        var e = document.getElementById(id);
+        e.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        document.getElementById('dialog-rounded').showModal();
+    }
+</script>
+{% endblock head %}
+
+{% block body %}
+<dialog class="nes-dialog is-rounded" id="dialog-rounded">
+    <form method="dialog">
+        <h1 class="title"><i class="nes-icon is-medium heart" style="margin-bottom: 18px;"></i> 提示 | Info <i
+                class="nes-icon is-medium heart" style="margin-bottom: 18px;"></i></h1>
+        <h2>复制成功! | Copied!</h2>
+        <menu class="dialog-menu">
+            <button class="nes-btn is-primary">确定|OK</button>
+        </menu>
+    </form>
+</dialog>
+
+<div class="nes-container with-title is-centered" id="url-form">
+    <p class="title">
+        <i class="nes-icon coin is-small"></i>
+        链接已生成！ | URL Generated!
+        <i class="nes-icon coin is-small"></i>
+    </p>
+
+    <div class="nes-field  is-inline">
+        <label for="url">链接 | URL</label>
+        <input type="text" id="url" class="nes-input" name="url" readonly="readonly" value="{{ url }}">
+
+        <button class="nes-btn is-primary" onclick="copy('url')">
+            <i class="nes-icon coin is-small"></i>
+            复制 | Copy
+            <i class="nes-icon coin is-small"></i>
+        </button>
+    </div>
+</div>
+{% endblock %}

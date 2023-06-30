@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}短链接生成器 | URL Shortening{% endblock title %}
+{% block body %}
+<div class="nes-container with-title is-centered" id="url-form">
+    <p class="title">
+        <i class="nes-icon trophy is-small"></i>
+         短链接生成器 | URL Shortening 
+        <i class="nes-icon trophy is-small"></i>
+    </p>
+    <form method="post" action="/gen">
+        <div class="nes-field  is-inline">
+            <label for="url">输入链接 Url</label>
+            <input type="text" id="url" class="nes-input" name="url" placeholder="https://www.example.com/">
+            <button type="submit" class="nes-btn is-primary">
+                生成 | Gen
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
