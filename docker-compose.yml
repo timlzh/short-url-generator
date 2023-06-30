@@ -6,4 +6,6 @@ services:
       - "8283:8283"
   
   db:
-    image: mongo:latest
+    image: mongo:4.4.6
+    volumes:
+      - ./db:/data/db
