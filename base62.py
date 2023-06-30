@@ -1,4 +1,9 @@
+"""
+@Author: Timlzh <2921349622@qq.com>
+"""
+
 BASE62 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 
 def encode(num, alphabet=BASE62):
     """Encode a positive number into Base X and return the string.
@@ -19,6 +24,7 @@ def encode(num, alphabet=BASE62):
     arr.reverse()
     return ''.join(arr)
 
+
 def decode(string, alphabet=BASE62):
     """Decode a Base X encoded string into the number
 
@@ -28,12 +34,7 @@ def decode(string, alphabet=BASE62):
     """
     base = len(alphabet)
     strlen = len(string)
-    num = 0
-
-    idx = 0
-    for char in string:
-        power = (strlen - (idx + 1))
-        num += alphabet.index(char) * (base ** power)
-        idx += 1
-
-    return num
+    return sum(
+        alphabet.index(char) * base ** (strlen - (idx + 1))
+        for idx, char in enumerate(string)
+    )

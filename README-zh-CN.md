@@ -34,8 +34,6 @@
     [database]
     host = localhost ; 数据库地址
     port = 27017 ; 数据库端口
-    db = shortUrlDB ; 数据库名称 [可以不改动]
-    collection = shortUrls ; 数据库集合名称 [可以不改动]
     login = 0 ; 是否需要登录 [0:不需要 1:需要]
     user = root ; 数据库用户名
     password = password ; 数据库密码
